@@ -2,6 +2,7 @@ import Image from "next/image";
 
 interface Project {
   id: number;
+  icon: string;
   title: string;
   image: string;
   year: string;
@@ -39,8 +40,14 @@ export default async function Projects() {
     <>
       <article className="wrapper  project about">
         <h2 className="text-3xl md:text-4xl border-header flex gap-1">
-          <Image src={"/project.gif"} alt="project" width={40} height={40} />
-          <span>Project</span>
+          <Image
+            src={"/project.gif"}
+            alt="project"
+            width={40}
+            height={40}
+            unoptimized
+          />
+          <span>Featured Work</span>
         </h2>
         <ul className="cards">
           {project.map((proj) => (
@@ -52,6 +59,7 @@ export default async function Projects() {
                   width={650}
                   height={500}
                   className="object-cover rounded-xl"
+                  unoptimized
                 />
               ) : null}
               <div className="p-2 card">
@@ -65,7 +73,13 @@ export default async function Projects() {
                     </span>
                   ))}
                 </span>
-                <h2 className="card-text text-2xl">{proj.title}</h2>
+                <div className="flex items-center gap-2">
+                  <Image src={proj.icon} alt="icons" width={30} height={20} />
+                  <h2 className="card-text text-2xl flex gap-2">
+                    {proj.title}
+                  </h2>
+                </div>
+                <p className="text-sm font-light">{proj.description}</p>
                 <div className="card-button">
                   <span> {proj.links.demo}</span>
                   <span> {proj.links.sourceCode}</span>

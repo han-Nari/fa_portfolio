@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 export default function About() {
@@ -5,7 +6,13 @@ export default function About() {
     <>
       <article className="wrapper pt-20 about">
         <h2 className="text-3xl md:text-4xl border-header flex gap-2">
-          <Image src={"/aboutme.gif"} alt="about" width={40} height={40} />
+          <Image
+            src={"/aboutme.gif"}
+            alt="about"
+            width={40}
+            height={40}
+            unoptimized
+          />
           <span>About Me</span>
         </h2>
         <p>

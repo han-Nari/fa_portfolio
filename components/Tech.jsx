@@ -8,7 +8,13 @@ export default function Tech() {
     <>
       <article className="wrapper flex flex-col gap-5">
         <h2 className="text-3xl md:text-4xl border-header flex gap-1">
-          <Image src={"/tech.gif"} alt="tech" width={40} height={40} />
+          <Image
+            src={"/tech.gif"}
+            alt="tech"
+            width={40}
+            height={40}
+            unoptimized
+          />
           <span>Tech Stack</span>
         </h2>
         <div className="stack">
@@ -16,10 +22,20 @@ export default function Tech() {
             onClick={() => {
               setStack("prog");
             }}
-            className={stack === "prog" ? "text-white border-b" : ""}
+            className={
+              stack === "prog"
+                ? "text-[#0cb6b6]  border-dotted border-b border-[#1b1b1b]/50"
+                : ""
+            }
           >
             <div className="flex items-center  gap-1">
-              <Image src={"/laptop.gif"} alt="laptop" width={40} height={40} />
+              <Image
+                src={"/laptop.gif"}
+                alt="laptop"
+                width={40}
+                height={40}
+                unoptimized
+              />
               <span>Programming Language</span>
             </div>
           </button>
@@ -27,10 +43,20 @@ export default function Tech() {
             onClick={() => {
               setStack("frameworks");
             }}
-            className={stack === "frameworks" ? "text-white border-b" : ""}
+            className={
+              stack === "frameworks"
+                ? "text-[#0cb6b6] border-dotted border-b border-[#1b1b1b]/50"
+                : ""
+            }
           >
             <div className="flex items-center  gap-1">
-              <Image src={"/frame.gif"} alt="laptop" width={40} height={40} />
+              <Image
+                src={"/frame.gif"}
+                alt="laptop"
+                width={40}
+                height={40}
+                unoptimized
+              />
               <span>Frameworks & Libraries</span>
             </div>
           </button>
@@ -38,10 +64,20 @@ export default function Tech() {
             onClick={() => {
               setStack("tools");
             }}
-            className={stack === "tools" ? "text-white border-b" : ""}
+            className={
+              stack === "tools"
+                ? "text-[#0cb6b6] border-dotted border-b border-[#1b1b1b]/50"
+                : ""
+            }
           >
             <div className="flex items-center  gap-1">
-              <Image src={"/tools.gif"} alt="laptop" width={40} height={40} />
+              <Image
+                src={"/laptop.gif"}
+                alt="laptop"
+                width={40}
+                height={40}
+                unoptimized
+              />
               <span>Tools and Software</span>
             </div>
           </button>
@@ -121,7 +157,7 @@ export default function Tech() {
                 <p>Vs Code</p>
               </div>
               <div>
-                <Image src={"/github.svg"} alt="vs" width={30} height={30} />
+                <Image src={"/github.png"} alt="vs" width={30} height={30} />
                 <p>Vs Code</p>
               </div>
             </article>

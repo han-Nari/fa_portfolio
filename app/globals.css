@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f0fff0;
   --foreground: #171717;
   --font-jersy-10: "Jersey 10", sans-serif;
 }
@@ -15,23 +15,37 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1b1b1b;
+    --background: var(--background);
     --foreground: #ededed;
   }
 }
 
 h1,
+h4 {
+  color: #ffffff;
+  font-family: var(--font-jersy-10);
+}
+
 h2,
 h3,
 .title {
   font-family: var(--font-jersy-10);
+  color: #1b1b1b;
+}
+
+.stack {
+  font-family: var(--font-jersy-10);
+}
+
+p {
+  color: #1b1b1b;
 }
 
 body {
-  background: var(--background);
+  background: #f9f9f9;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  padding-bottom: 20em;
+  padding-bottom: 10em;
 }
 
 .wrapper {
@@ -46,7 +60,7 @@ img {
 
 @layer base {
   .background-top {
-    @apply bg-gradient-to-r from-[#77C6FF] to-[#F3A0A0] h-[40vh] w-full grid place-content-center md:h-[50vh];
+    @apply bg-gradient-to-r from-[#77C6FF] to-[#EE4D4D] h-[40vh] w-full grid place-content-center md:h-[50vh];
   }
 
   .title-header {
@@ -58,31 +72,31 @@ img {
   }
 
   .media {
-    @apply flex flex-wrap justify-center gap-2 [&>div]:border-white/20 *:text-white/50 [&>div]:rounded-sm [&>div]:text-sm [&>div]:border [&>div]:flex [&>div]:items-center [&>div]:gap-2 [&>div]:p-2 [&>div]:hover:text-white *:hover:border-white [&>div]:hover:cursor-pointer [&>div>i]:text-sm;
+    @apply flex flex-wrap justify-center gap-2 *:shadow-md *:font-semibold *:bg-[#f0f8ff] *:text-[#1b1b1b] [&>div]:rounded-sm [&>div]:text-sm [&>div]:flex [&>div]:items-center [&>div]:gap-2 [&>div]:p-2 [&>div]:hover:cursor-pointer [&>div>i]:text-sm;
   }
 
   .study {
-    @apply flex flex-col gap-5   *:border *:border-white/50 *:px-5 *:rounded-md;
+    @apply flex flex-col gap-2 text-[#1b1b1b] *:shadow-md *:bg-[#f0f8ff] *:p-2 *:rounded-md;
   }
 
   .about {
-    @apply flex flex-col gap-5 [&>p]:text-white/50;
+    @apply flex flex-col gap-5 [&>p]:text-white/50 *:font-semibold;
   }
 
   .border-header {
-    @apply border-b-1 border-white/20;
+    @apply border-b-2 border-dotted border-[#1b1b1b]/50;
   }
 
   .stack {
-    @apply flex gap-2  *:hover:cursor-pointer *:p-2 *:text-sm *:text-balance *:text-white/50  *:hover:text-white;
+    @apply flex gap-2 *:hover:cursor-pointer *:p-2 *:text-xl *:text-balance *:text-[#1b1b1b]/90  *:hover:text-[#1b1b1b];
   }
 
   .programming {
-    @apply flex flex-wrap *:w-50 gap-2 *:flex *:border *:items-center *:gap-2  *:p-2 *:rounded-sm *:text-white/50 *:hover:text-white *:hover:cursor-pointer *:text-sm;
+    @apply flex flex-wrap *:w-50 gap-2 *:flex *:font-semibold *:shadow-md *:bg-[#f0f8ff] *:items-center *:gap-2  *:p-2 *:rounded-sm *:hover:text-white *:hover:cursor-pointer *:text-sm;
   }
 
   .cards {
-    @apply grid gap-5 lg:grid lg:grid-cols-2 *:hover:bg-white/10;
+    @apply grid gap-5 lg:grid lg:grid-cols-2  *:bg-[#f0f8ff] *:hover:shadow-xl *:shadow-md;
   }
 
   .card {
@@ -90,7 +104,7 @@ img {
   }
 
   .card-text {
-    @apply grid gap-2;
+    @apply grid gap-2 tracking-wide;
   }
 
   .card-prog {
@@ -98,7 +112,11 @@ img {
   }
 
   .card-button {
-    @apply flex gap-2 *:font-semibold *:hover:bg-[#EE4D4D] *:hover:text-white *:cursor-pointer *:text-white/50 *:rounded-sm *:p-1 *:px-3 *:text-sm;
+    @apply flex gap-2 *:font-semibold *:text-[#1b1b1b]/80 *:hover:text-[#1b1b1b] *:shadow-md *:cursor-pointer *:rounded-sm *:p-1 *:px-3 *:text-sm;
+  }
+
+  .skills {
+    @apply text-[#1b1b1b] text-xs flex flex-wrap gap-1 *:bg-[#f0f8ff] *:p-2 *:shadow-md *:rounded-full;
   }
 
   /* .project {

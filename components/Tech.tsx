@@ -157,8 +157,8 @@ export default function Tech() {
                 <p>Vs Code</p>
               </div>
               <div>
-                <Image src={"/github.png"} alt="vs" width={30} height={30} />
-                <p>Vs Code</p>
+                <Image src={"/github.png"} alt="git" width={30} height={30} />
+                <p>Github</p>
               </div>
             </article>
           </>

@@ -87,7 +87,7 @@ img {
   }
 
   .programming {
-    @apply flex flex-wrap *:w-50 gap-2 *:flex *:font-semibold *:shadow-md *:bg-[#f0f8ff]  *:text-[#1b1b1b] *:items-center *:gap-2  *:p-2 *:rounded-sm *:hover:cursor-pointer *:text-sm;
+    @apply flex flex-wrap *:w-40 gap-2 *:flex *:font-semibold *:shadow-md *:bg-[#f0f8ff]  *:text-[#1b1b1b] *:items-center *:gap-2  *:p-2 *:rounded-sm *:hover:cursor-pointer *:text-xs;
   }
 
   .cards {

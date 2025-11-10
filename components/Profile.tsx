@@ -9,7 +9,7 @@ export default function Profile() {
         <div className="grid gap-5">
           <Image
             className="mx-auto rounded-full border-5 border-[#f0f8ff]"
-            src={"/lek.jpg"}
+            src={"./lek.jpg"}
             alt="felix"
             width={150}
             height={150}

@@ -36,7 +36,7 @@ export default function Tech() {
                 height={40}
                 unoptimized
               />
-              <span>Programming Language</span>
+              <span>Languages</span>
             </div>
           </button>
           <button
@@ -57,7 +57,7 @@ export default function Tech() {
                 height={40}
                 unoptimized
               />
-              <span>Frameworks & Libraries</span>
+              <span>Frameworks</span>
             </div>
           </button>
           <button
@@ -78,7 +78,7 @@ export default function Tech() {
                 height={40}
                 unoptimized
               />
-              <span>Tools and Software</span>
+              <span>Tools</span>
             </div>
           </button>
         </div>

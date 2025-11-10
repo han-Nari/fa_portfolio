@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface Project {
   id: number;
@@ -8,7 +9,7 @@ interface Project {
   year: string;
   technologies: string[];
   description: string;
-  links: { demo: string; sourceCode: string };
+  links: { label: string; url: string }[];
 }
 
 async function myProject(): Promise<Project[]> {
@@ -74,15 +75,19 @@ export default async function Projects() {
                   ))}
                 </span>
                 <div className="flex items-center gap-2">
-                  <Image src={proj.icon} alt="icons" width={30} height={20} />
+                  <Image src={proj.icon} alt="icons" width={20} height={20} />
                   <h2 className="card-text text-2xl flex gap-2">
                     {proj.title}
                   </h2>
                 </div>
                 <p className="text-sm font-light">{proj.description}</p>
                 <div className="card-button">
-                  <span> {proj.links.demo}</span>
-                  <span> {proj.links.sourceCode}</span>
+                  {proj.links.map((link, i) => (
+                    <Link key={i} href={link.url} target="_blank">
+                      {" "}
+                      {link.label}
+                    </Link>
+                  ))}
                 </div>
               </div>
             </li>

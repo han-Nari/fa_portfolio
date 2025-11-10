@@ -60,7 +60,7 @@ img {
 
 @layer base {
   .background-top {
-    @apply bg-gradient-to-r from-[#77C6FF] to-[#EE4D4D] h-[40vh] w-full grid place-content-center md:h-[50vh];
+    @apply bg-linear-to-r from-[#77C6FF] to-[#EE4D4D] h-[40vh] w-full grid place-content-center md:h-[50vh];
   }
 
   .title-header {

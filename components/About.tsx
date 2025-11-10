@@ -15,11 +15,14 @@ export default function About() {
           />
           <span>About Me</span>
         </h2>
-        <p>
-          Hi, I’m Felix, a junior front-end developer specializing in React. I’m
-          dedicated to crafting smooth, responsive web applications while
-          continuously learning new technologies to improve my skills.
-        </p>
+        <span className="grid gap-2">
+          <h3 className="text-3xl tracking-wider">Hi 👋, I’m Felix,</h3>
+          <p className="font-light text-md indent-9 md:text-xl">
+            A junior front-end developer specializing in React. I’m dedicated to
+            crafting smooth, responsive web applications while continuously
+            learning new technologies to improve my skills.
+          </p>
+        </span>
       </article>
     </>
   );

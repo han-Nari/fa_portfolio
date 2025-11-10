@@ -39,7 +39,7 @@ export default async function Projects() {
   const project: Project[] = await myProject();
   return (
     <>
-      <article className="wrapper  project about">
+      <article className="wrapper  project about pb-20">
         <h2 className="text-3xl md:text-4xl border-header flex gap-1">
           <Image
             src={"/project.gif"}
@@ -80,7 +80,9 @@ export default async function Projects() {
                     {proj.title}
                   </h2>
                 </div>
-                <p className="text-sm font-light">{proj.description}</p>
+                <p className="text-sm text-[#1b1b1b] font-light">
+                  {proj.description}
+                </p>
                 <div className="card-button">
                   {proj.links.map((link, i) => (
                     <Link key={i} href={link.url} target="_blank">

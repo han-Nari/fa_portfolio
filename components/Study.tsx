@@ -21,7 +21,7 @@ export default function Study() {
             <i className="fa-solid fa-book"></i>
             <div>
               <h3 className="text-xl ">Field of Study</h3>
-              <p className="text-xs text-white/50">
+              <p className="text-xs text-[#1b1b1b]">
                 Bachelor of Science in Information Technology (BSIT)
               </p>
             </div>
@@ -30,7 +30,7 @@ export default function Study() {
             <i className="fa-solid fa-code"></i>
             <div>
               <h3 className="text-xl">Specialization</h3>
-              <p className="text-xs text-white/50">
+              <p className="text-xs text-[#1b1b1b]">
                 Front-end Developer & UI Designer
               </p>
             </div>
@@ -39,7 +39,7 @@ export default function Study() {
             <i className="fa-solid fa-calendar-days"></i>
             <div>
               <h3 className="text-xl ">Academic Year</h3>
-              <p className="text-xs text-white/50">2019 - 2024</p>
+              <p className="text-xs text-[#1b1b1b]">2019 - 2024</p>
             </div>
           </div>
         </div>

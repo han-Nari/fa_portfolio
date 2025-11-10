@@ -37,15 +37,10 @@ h3,
   font-family: var(--font-jersy-10);
 }
 
-p {
-  color: #1b1b1b;
-}
-
 body {
   background: #f9f9f9;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  padding-bottom: 10em;
 }
 
 .wrapper {
@@ -92,7 +87,7 @@ img {
   }
 
   .programming {
-    @apply flex flex-wrap *:w-50 gap-2 *:flex *:font-semibold *:shadow-md *:bg-[#f0f8ff] *:items-center *:gap-2  *:p-2 *:rounded-sm *:hover:text-white *:hover:cursor-pointer *:text-sm;
+    @apply flex flex-wrap *:w-50 gap-2 *:flex *:font-semibold *:shadow-md *:bg-[#f0f8ff]  *:text-[#1b1b1b] *:items-center *:gap-2  *:p-2 *:rounded-sm *:hover:cursor-pointer *:text-sm;
   }
 
   .cards {

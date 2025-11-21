@@ -1,7 +1,3 @@
-import Step from "@mui/material/Step";
-import StepLabel from "@mui/material/StepLabel";
-import Typography from "@mui/material/Typography";
-
 export default function Design() {
   return (
     <>

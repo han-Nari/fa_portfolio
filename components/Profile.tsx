@@ -8,7 +8,7 @@ export default function Profile() {
       <article className="wrapper relative  -top-20 text-center grid gap-5">
         <div className="grid gap-5">
           <Image
-            className="mx-auto rounded-full border-5 border-[#f0f8ff]"
+            className="white-fire mx-auto rounded-full  "
             src={"./lek.jpg"}
             alt="felix"
             width={150}

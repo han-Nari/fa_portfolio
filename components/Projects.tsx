@@ -39,7 +39,7 @@ export default async function Projects() {
   const project: Project[] = await myProject();
   return (
     <>
-      <article className="wrapper  project about pb-20">
+      <article className="mx-auto px-5 about py-20">
         <h2 className="text-3xl md:text-4xl border-header flex gap-1">
           <Image
             src={"/project.gif"}
@@ -53,35 +53,38 @@ export default async function Projects() {
         <ul className="cards">
           {project.map((proj) => (
             <li key={proj.id} className="card">
-              {proj.image ? (
-                <Image
-                  src={proj.image}
-                  alt="evenight"
-                  width={650}
-                  height={500}
-                  className="object-cover rounded-xl"
-                  unoptimized
-                />
-              ) : null}
               <div className="p-2 card">
-                <span className="card-prog">
-                  {proj.technologies.map((tech, i) => (
-                    <span
-                      key={i}
-                      className={`${techColors[tech] || "bg-transparent"}`}
-                    >
-                      {tech}
+                <div className="flex flex-col gap-4">
+                  {proj.image ? (
+                    <Image
+                      src={proj.image}
+                      alt="evenight"
+                      width={1000}
+                      height={1000}
+                      className="object-cover"
+                      unoptimized
+                    />
+                  ) : null}
+                  <div className="flex flex-col gap-2">
+                    <span className="card-prog">
+                      {proj.technologies.map((tech, i) => (
+                        <span
+                          key={i}
+                          className={`${techColors[tech] || "bg-transparent"}`}
+                        >
+                          {tech}
+                        </span>
+                      ))}
                     </span>
-                  ))}
-                </span>
-                <div className="flex items-center gap-2">
-                  <h2 className="card-text text-2xl flex gap-2">
-                    {proj.title}
-                  </h2>
+                    <h2 className="card-text text-2xl flex gap-2">
+                      {proj.title}
+                    </h2>
+                    <p className="text-sm text-[#1b1b1b]/70 font-light">
+                      {proj.description}
+                    </p>
+                  </div>
                 </div>
-                <p className="text-sm text-[#1b1b1b] font-light">
-                  {proj.description}
-                </p>
+
                 <div className="card-button">
                   {proj.links.map((link, i) => (
                     <Link key={i} href={link.url} target="_blank">

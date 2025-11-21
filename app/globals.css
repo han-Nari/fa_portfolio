@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --background: #f0fff0;
   --foreground: #171717;
@@ -53,9 +57,27 @@ img {
   height: auto;
 }
 
+@keyframes white-fire {
+  0% {
+    box-shadow: 0 0 5px #fff, 0 0 10px #f0f0f0, 0 0 15px #e0e0e0;
+  }
+  50% {
+    box-shadow: 0 0 10px #f0f0f0, 0 0 20px #fff, 0 0 30px #e0e0e0;
+  }
+  100% {
+    box-shadow: 0 0 5px #fff, 0 0 10px #f0f0f0, 0 0 15px #e0e0e0;
+  }
+}
+
+.white-fire {
+  animation: white-fire 1.5s infinite alternate;
+  border-radius: 50%; /* keep image circular */
+}
+
 @layer base {
   .background-top {
-    @apply bg-linear-to-r from-[#77C6FF] to-[#EE4D4D] h-[40vh] w-full grid place-content-center md:h-[50vh];
+    @apply bg-gradient-to-r from-[#2563EB] to-[#E0F2FE] 
+          h-[40vh] w-full grid place-content-center md:h-[50vh];
   }
 
   .title-header {
@@ -91,11 +113,11 @@ img {
   }
 
   .cards {
-    @apply grid gap-5 lg:grid lg:grid-cols-2  *:bg-[#f0f8ff] *:hover:shadow-xl *:shadow-md;
+    @apply grid gap-5 *:hover:border *:hover:bg-white md:grid-cols-2 lg:grid lg:grid-cols-3;
   }
 
   .card {
-    @apply grid gap-3 p-5 rounded-2xl;
+    @apply grid gap-8  p-5;
   }
 
   .card-text {
@@ -103,18 +125,18 @@ img {
   }
 
   .card-prog {
-    @apply text-xs flex gap-2 *:p-0.5 *:px-2 *:rounded-xl;
+    @apply text-xs flex  gap-2 *:p-0.5 *:px-2 *:rounded-xl;
   }
 
   .card-button {
-    @apply flex gap-2 *:font-semibold *:text-[#1b1b1b]/80 *:hover:text-[#1b1b1b] *:shadow-md *:cursor-pointer *:rounded-sm *:p-1 *:px-3 *:text-sm;
+    @apply flex gap-3 *:font-semibold *:text-[#1b1b1b]/80 *:hover:text-[#1b1b1b] *:cursor-pointer   *:text-sm;
   }
 
   .skills {
     @apply text-[#1b1b1b] text-xs flex flex-wrap gap-1 *:bg-[#f0f8ff] *:p-2 *:shadow-md *:rounded-full;
   }
 
-  /* .project {
-    @apply bg-black p-5 shadow-md;
-  } */
+  .project {
+    @apply w-screen;
+  }
 }

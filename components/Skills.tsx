@@ -26,6 +26,7 @@ export default function Skills() {
             <li>DOM Manipulation</li>
             <li>Event Handling</li>
             <li>Asynchronous JavaScript</li>
+            <li>API</li>
             <li>Objects &amp; Destructuring</li>
             <li>React.js: Hooks, Router</li>
             <li>State Management (Redux Toolkit)</li>

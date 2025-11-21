@@ -75,7 +75,6 @@ export default async function Projects() {
                   ))}
                 </span>
                 <div className="flex items-center gap-2">
-                  <Image src={proj.icon} alt="icons" width={20} height={20} />
                   <h2 className="card-text text-2xl flex gap-2">
                     {proj.title}
                   </h2>
@@ -86,7 +85,6 @@ export default async function Projects() {
                 <div className="card-button">
                   {proj.links.map((link, i) => (
                     <Link key={i} href={link.url} target="_blank">
-                      {" "}
                       {link.label}
                     </Link>
                   ))}
